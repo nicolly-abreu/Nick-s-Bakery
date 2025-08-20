@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nick's Bakery</title>
+
+  <!-- Fonte charmosa -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Nick's Bakery</h1>
+    <nav>
+        <ul class="menu">
+            <li><a href="#sobremesas" data-img="imagens/sobremesas.jpg">Sobremesas</a></li>
+            <li><a href="#doces" data-img="imagens/doces.jpg">Doces de Festa</a></li>
+            <li><a href="#bolos" data-img="bolo.jpg">Bolos</a></li>
+            <li><a href="#cookies" data-img="imagens/cookies.jpg">Cookies</a></li>
+          </ul>
+          
+    </nav>
+  </header>
+
+  <main>
+    <!-- SESSÃO: SOBREMESAS -->
+    <section id="sobremesas" class="cardapio">
+      <h2>Sobremesas</h2>
+
+      <h3>Massas</h3>
+      <div class="linha"><span>Baunilha</span><span class="preco">5,00</span></div>
+      <div class="linha destaque"><span>Chocolate</span><span class="preco">5,00</span><span class="etiqueta">Mais vendido</span></div>
+      <div class="linha"><span>Red Velvet</span><span class="preco">6,00</span></div>
+
+      <h3>Recheios</h3>
+      <div class="linha"><span>Brigadeiro</span><span class="preco">1,00</span></div>
+      <div class="linha"><span>Ninho com morango</span><span class="preco">2,00</span></div>
+      <div class="linha"><span>Doce de leite</span><span class="preco">1,50</span></div>
+
+      <h3>Tamanhos</h3>
+      <div class="linha"><span>500g</span><span class="preco">25,00</span></div>
+      <div class="linha"><span>1kg</span><span class="preco">45,00</span></div>
+      <div class="linha"><span>2kg</span><span class="preco">85,00</span></div>
+    </section>
+
+    <!-- SESSÃO: DOCES DE FESTA -->
+    <section id="doces" class="cardapio">
+      <h2>Doces de Festa</h2>
+
+      <h3>Sabores</h3>
+      <div class="linha"><span>Brigadeiro</span><span class="preco">1,00</span></div>
+      <div class="linha"><span>Beijinho</span><span class="preco">1,00</span></div>
+      <div class="linha"><span>Cajuzinho</span><span class="preco">1,00</span></div>
+
+      <h3>Combo</h3>
+      <div class="linha"><span>100 unidades</span><span class="preco">90,00</span></div>
+      <img src="doce.jfif"/>
+    </section>
+    
+
+    <!-- SESSÃO: BOLOS -->
+    <section id="bolos" class="cardapio">
+      <h2>Bolos</h2>
+
+      <h3>Massas</h3>
+      <div class="linha"><span>Baunilha</span><span class="preco">5,00</span></div>
+      <div class="linha"><span>Chocolate</span><span class="preco">5,00</span></div>
+
+      <h3>Recheios</h3>
+      <div class="linha"><span>Ninho com morango</span><span class="preco">2,00</span></div>
+      <div class="linha destaque"><span>Brigadeiro gourmet</span><span class="preco">2,50</span><span class="etiqueta">Mais pedido</span></div>
+
+      <h3>Tamanhos</h3>
+      <div class="linha"><span>1kg</span><span class="preco">50,00</span></div>
+      <div class="linha"><span>2kg</span><span class="preco">95,00</span></div>
+    </section>
+
+    <!-- SESSÃO: COOKIES -->
+    <section id="cookies" class="cardapio">
+      <h2>Cookies</h2>
+
+      <h3>Sabores</h3>
+      <div class="linha"><span>Chocolate com gotas</span><span class="preco">6,00</span></div>
+      <div class="linha destaque"><span>Red Velvet</span><span class="preco">6,00</span><span class="etiqueta">Mais amado</span></div>
+      <div class="linha"><span>Doce de leite</span><span class="preco">6,00</span></div>
+
+      <h3>Combo</h3>
+      <div class="linha"><span>10 unidades</span><span class="preco">50,00</span></div>
+    </section>
+
+    <!-- DEPOIMENTOS (opcional) -->
+    <section id="depoimentos" class="depoimentos">
+      <h2>O que nossos clientes dizem</h2>
+      <blockquote>“O melhor bolo que já comi na vida!” — Juliana C.</blockquote>
+      <blockquote>“Atendimento maravilhoso e sabores incríveis.” — Marcos A.</blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <p>📞 WhatsApp: (99) 99999-9999</p>
+    <p>📸 Instagram: @nicksbakery</p>
+    <p>📘 Facebook: facebook.com/nicksbakery</p>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5599999999999" class="whatsapp-float" target="_blank">💬</a>
+  <script>
+    // percorre todos os itens do cardápio
+    document.querySelectorAll('.linha').forEach(item => {
+      const img = item.getAttribute('data-img');
+      if (img) {
+        // cria uma variável CSS com a imagem
+        item.style.setProperty('--img', `url(${img})`);
+      }
+    });
+  </script>
+  
+</body>
+</html>
